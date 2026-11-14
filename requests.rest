@@ -1,0 +1,62 @@
+POST http://localhost:3000/category
+Content-Type: application/json
+
+{
+    "title" : "fruits",
+    "image" : "fruits.png",
+    "parent_id" : null
+}
+
+###
+
+PUT http://localhost:3000/category/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "vegetables",
+    "slug" : "vegetables",
+    "image" : "vegetables.png",
+    "parent_id" : null
+}
+
+###
+
+PATCH http://localhost:3000/category/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "title" : "green vegetables"
+}
+
+###
+
+DELETE http://localhost:3000/category/1
+Authorization: Bearer <access_token>
+###
+
+GET http://localhost:3000/user
+Authorization: Bearer <access_token>
+
+###
+
+GET http://localhost:3000/user/1
+Authorization: Bearer <access_token>
+
+###
+
+PATCH http://localhost:3000/user/1
+Content-Type: application/json
+Authorization: Bearer <access_token>
+
+{
+    "fullname" : "New Name",
+    "email" : "new@example.com",
+    "password" : "new-password"
+}
+
+###
+
+DELETE http://localhost:3000/user/1
+Authorization: Bearer <access_token>
